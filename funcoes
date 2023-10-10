@@ -1,0 +1,53 @@
+create database safesadv;
+use safesadv;
+
+create table nomes(
+nomemasc varchar(50),
+nomefem varchar(50)
+);
+
+insert into nomes(nomemasc)
+values("Roberto", 'João");
+
+insert into nomes(nomefem)
+values("Maria Clara", 'Roberta");
+
+select upper(nomemasc, nomefem)
+from nomes;
+
+select length(nomemasc, nomefem)
+from nomes;
+
+select concat("Sr. ", nomemasc, "Sra. ", nomefem)
+from nomes;
+
+
+create table produtos(
+produts bigint,
+preco bigint,
+quantidade bigint
+);
+
+select round(preco, 2)
+from produtos;
+
+select abs(quantidade);
+from produtos
+
+select avg(preco)
+from produtos;
+
+
+create table eventos(
+data_evento datetime
+);
+
+insert into(data_evento)
+values("2021-08-21 21:21:21", "2022-02-22 22:22:22", "2023-01-01 23:23:23");
+
+insert into(data_evento)
+select now();
+
+select datediff(2021-08-21 21:21:21, 2022-02-22 22:22:22);
+
+select dayname(2021-08-21 21:21:21, 2022-02-22 22:22:22, 2023-01-01 23:23:23);
